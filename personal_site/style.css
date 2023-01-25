@@ -28,10 +28,16 @@ ul {
     color: var(--lightest);
 }
 
-li, ul a {
+.ul-nav li, ul a {
     margin: 0.5em;
     padding: 10px;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
 li a:link, li a:visited {
     text-decoration: none;
@@ -100,11 +106,8 @@ hr {
 }
 
 #about {
-    display: flex;
-    flex-direction: column;
     max-width: 100%;
     min-height: 600px;
-    align-items: center;
 }
 
 .about-section {
@@ -112,8 +115,36 @@ hr {
     justify-content: space-between;
 }
 
+.about-info {
+    display: flex;
+    flex-direction: column;
+}
+
 .about-pic {
     width: 50%;
     height: 600px;
     margin: 0 10%;
+}
+
+.about-skills {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5em;
+}
+.skills {
+    color: var(--teal);
+    text-decoration: none;
+    border: 1px solid var(--teal);
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+}
+
+.skills:hover {
+    outline: none;
+    background-color: #64ffda1a;
+}
+
+#projects {
+    max-width: 100%;
+    min-height: 600px;
 }

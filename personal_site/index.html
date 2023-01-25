@@ -14,8 +14,8 @@
 </head>
 <body>
     <script src="app.js"></script>
-    <nav class="main-nav">
-        <ul>
+    <nav class="main-nav sticky">
+        <ul class="ul-nav">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -30,19 +30,44 @@
             <p>I'm a software engineer focusing on front-end development.</p>
         </section>
 
-        <h2 class="header">About Me<hr></h2>
         <section id="about">
+            <h2 class="header">About Me<hr></h2>
             <div class="about-section">
-                <p>Hello! My name is Kevin Nguyen. I graduated from University of Nevada, Las Vegas with a bachelors in Computer Science.
+                <div class="about-info">Hello! My name is Kevin Nguyen. I graduated from University of Nevada, Las Vegas with a bachelors in Computer Science.
                     After graduating, I decided to persue some entrepreneurial projects and opened up a few nail salons.
-                    I had some fun with that and now I'm ready to get back to my tech roots!
-                </p>
+                    I had some fun with that and now I'm ready to get back to my tech roots!<br>
+                    I am currently enrolled in Rithms Full Stack bootcamp. These next few months will be rough but I'm sure
+                    I will gain a lot of skills along the way.<br>
+                    <br>
+                    Here are a few technologies I've been working with recently:<br>
+                    <ul class="about-skills">
+                        <br>
+                        <li class="skills">HTML</li>
+                        <li class="skills">CSS</li>
+                        <li class="skills">JavaScript</li>
+                        <li class="skills">React</li>
+                        <li class="skills">Python</li>
+                        <li class="skills">Flask</li>
+                    </ul>
+                  
+                </div>
                 <img class='about-pic' src="kevinnguyen.jpeg">
             </div>
         </section>
 
-        <h2 class="header">Projects</h2>
-        <h2 class="header">Contact</h2>
+        <section id="projects">
+            <h2 class="header">Projects<hr></h2>
+            <div class="projects-section">
+                Coming soon...
+                    <br>
+                    Shout out to Rithm!
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="header">Contact<hr></h2>
+
+        </section>
     </main>
 </body>
 </html>
