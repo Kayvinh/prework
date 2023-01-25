@@ -1,0 +1,119 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --teal: #64ffda;
+    --navy: #0a192f;
+    --normal: #8892b0;
+    --lightest: #ccd6f6;
+}
+
+body{
+    background-color: var(--navy);
+    color: var(--normal);
+    font-family: 'Cascadia Code', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main-nav ul{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    margin: 2em;
+    color: var(--lightest);
+}
+
+li, ul a {
+    margin: 0.5em;
+    padding: 10px;
+}
+
+li a:link, li a:visited {
+    text-decoration: none;
+    color: var(--lightest);
+}
+
+li a:hover {
+    color: var(--teal);
+    cursor: pointer;
+}
+
+.resume-button {
+    color: var(--teal);
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--teal);
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+}
+
+.resume-button:hover {
+    outline: none;
+    background-color: #64ffda1a;
+}
+
+.landing {
+    margin-top: 15em;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: flex-start;
+    min-height: 600px;
+}
+
+main {
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+.h1-landing {
+    color: var(--teal);
+    font-size: 18px;
+    margin-bottom: 0.5em;
+}
+
+.h2-landing {
+    color: var(--lightest);
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.h3-landing{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.header {
+    font-size: 2em;
+    color: var(--lightest);
+}
+
+hr {
+    border: 1px solid var(--lightest);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 600px;
+    align-items: center;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-pic {
+    width: 50%;
+    height: 600px;
+    margin: 0 10%;
+}
