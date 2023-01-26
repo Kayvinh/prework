@@ -20,6 +20,14 @@ ul {
     list-style-type: none;
 }
 
+.logo {
+    max-width: 64px;
+    max-height: 64px;
+    position: absolute;
+    top: 36pt;
+    left: 36pt;
+}
+
 .main-nav ul{
     display: flex;
     justify-content: flex-end;
