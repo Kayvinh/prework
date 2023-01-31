@@ -1,9 +1,8 @@
 
-function addKeyAndValue(nums, start=0, end) { 
+function addKeyAndValue(objs, key, value) { 
   // Add any parameters you need. Good luck!
-  let sum = 0;
-  for(let i = start; i < end; i++) {
-    sum += nums[i];
+  for(let obj of objs) {
+    obj[key] = value;
   }
-  return sum;
+  return objs;
 }
