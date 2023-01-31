@@ -6,6 +6,7 @@ function reverseVowels(str) {
   let strArr = str.split("");
   let left = 0;
   let right = strArr.length - 1;
+  
   while (left < right) {
       while (left < right && !vowels.includes(strArr[left])) {
         left++;
@@ -19,6 +20,6 @@ function reverseVowels(str) {
     left++;
     right--;
   }
-  
+
     return strArr.join("");
 }
