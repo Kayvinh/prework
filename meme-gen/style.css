@@ -75,9 +75,9 @@ input[type=text]:focus {
 }
 
 .meme-item-top, .meme-item-bot {
+    position: absolute;
     left: 50%;
     margin-left: -200px;
-    position: absolute;
     padding: 0 5px;
     font-family: impact;
     font-size: 2.5em;
@@ -93,6 +93,7 @@ input[type=text]:focus {
     0px -2px 0 #000,
     -2px 0px 0 #000,
     2px 2px 5px #000;
+    overflow:hidden;
 }
 
 img {

@@ -1,3 +1,5 @@
+"use strict";
+
 const btn = document.querySelector('.add-button');
 const memeSection = document.querySelector('.meme-container');
 
@@ -14,6 +16,7 @@ btn.addEventListener('click', (e) => {
 
     const memeImg = document.createElement('img');
     memeImg.src = imgUrl;
+    memeImg.setAttribute('alt','Picture of meme');
 
     const topCaption = document.createElement('div')
     topCaption.classList.add('meme-item-top')
@@ -28,7 +31,12 @@ btn.addEventListener('click', (e) => {
     meme.appendChild(topCaption)
     meme.appendChild(botCaption)
 
-    memeImg.addEventListener('click', (e) => {
+    // Delete
+    memeImg.addEventListener('click', () => {
         memeImg.parentNode.remove();
     });
+
+    // Clear Form
+    document.querySelector('#myForm').reset();
+
 })
