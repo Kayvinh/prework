@@ -8,10 +8,64 @@
   display: inline-block;
 }
 
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+}
+
 .unflipped:hover {
   cursor: pointer;
 }
 
 .unflipped { 
   background-color: white;
+}
+
+
+.start-game {
+  visibility: hidden;
+}
+
+.start-game-btn {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  background-color: rgb(56, 224, 160);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.5rem;
+}
+
+.start-game-btn:hover {
+  cursor: pointer;
+  background-color: rgb(65, 253, 181);
+  color: black;
+  padding: 2.3rem;
+}
+
+.reset-btn {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgb(190, 30, 30);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.5rem;
+}
+
+.reset-btn:hover {
+  cursor: pointer;
+  background-color: rgb(235, 42, 42);
 }

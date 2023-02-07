@@ -52,6 +52,7 @@ function createCards(colors) {
   }
 }
 
+
 /** Flip a card face-up. */
 
 function flipCard(card) {
@@ -75,23 +76,34 @@ function unFlipCard(card) {
 let firstCard = null;
 let secondCard = null;
 let cannotClick = false;
+let score = 0;
+
+function updateScore() {
+  const scoreCount = document.querySelector('.score');
+  scoreCount.innerText = `Score: ${score}`;
+}
 
 function handleCardClick(evt) {
   // ... you need to write this ...
 
   // Will not allow clicks to be made
   if(cannotClick) {
-    return
+    return;
   }
 
   flipCard(evt.target);
 
   if(!firstCard) {
     firstCard = evt.target;
+    score++;
+    updateScore();
   } else {
     // second card is chosen, cannot click around anymore
     secondCard = evt.target;
+    score++;
+    updateScore();
     cannotClick = true;
+
 
     // If matching colors && works only if you click on two different cards
     if(firstCard.classList[0] === secondCard.classList[0] &&
@@ -115,3 +127,49 @@ function handleCardClick(evt) {
     }
   }
 }
+
+// Start Game
+const startGameBtn = document.querySelector('.start-game-btn');
+startGameBtn.addEventListener('click', handleStartGame);
+
+function handleStartGame(e) {
+  const startGame = document.querySelector('.start-game');
+  e.target.style.display = 'none';
+  startGame.style.visibility = 'visible';
+}
+
+// Reset Game
+const resetBtn = document.querySelector('.reset-btn');
+resetBtn.addEventListener('click', handleReset);
+let record = JSON.parse(localStorage.getItem('record'));
+
+function handleReset() {
+
+  // High Score
+  if(record === null) {
+    record = localStorage.setItem('record', JSON.stringify(score));
+    document.querySelector('.record').innerText = `Record: ${score}`;
+  } else {
+    if(score < localStorage.record) {
+      localStorage.setItem('record', JSON.stringify(score));
+      document.querySelector('.record').innerText = `Record: ${localStorage.record}`;
+      console.log(localStorage.record)
+    }
+  }
+
+  console.log(typeof record)
+
+  const game = document.querySelector('#game');
+  let child = game.lastElementChild;
+
+  while(child) {
+    game.removeChild(child)
+    child = game.lastElementChild;
+  }
+
+  shuffle(COLORS);
+  createCards(colors);
+  score = 0;
+  updateScore();
+}
+
